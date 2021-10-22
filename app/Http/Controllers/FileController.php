@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\File;
+use App\Models\FileModel as File;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -37,7 +37,7 @@ class FileController extends Controller
             ], 404);
     }
 
-    public function download($title)
+    public function download(String $title)
     {
         $file = File::where('title', '=', $title)->first();
         if ($file == Null)
@@ -50,7 +50,7 @@ class FileController extends Controller
             return Storage::download($file->path, $file->title);
     }
 
-    public function delete($title): JsonResponse
+    public function delete(String $title): JsonResponse
     {
         $file = File::where('title', '=', $title)->first();
         if ($file == Null)
