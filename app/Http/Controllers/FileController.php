@@ -37,20 +37,20 @@ class FileController extends Controller
             ], 404);
     }
 
-    public function download(String $title)
+    public function download(string $title)
     {
         $file = File::where('title', '=', $title)->first();
         if ($file == Null)
         {
             return response()->json([
                 "error" => "File was not found"
-            ]);
+            ], 404);
         }
         else
             return Storage::download($file->path, $file->title);
     }
 
-    public function delete(String $title): JsonResponse
+    public function delete(string $title): JsonResponse
     {
         $file = File::where('title', '=', $title)->first();
         if ($file == Null)
