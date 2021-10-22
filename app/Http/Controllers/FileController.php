@@ -57,7 +57,7 @@ class FileController extends Controller
         {
             return response()->json([
                 "error" => "File was not found"
-            ]);
+            ], 404);
         }
         else {
             Storage::delete($file->path);
