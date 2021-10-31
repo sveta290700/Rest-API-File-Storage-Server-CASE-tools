@@ -45,5 +45,5 @@
 <a href="https://ibb.co/2KCGR9j"><img src="https://i.ibb.co/pXMYN73/12.png" alt="12" border="0"></a>
 ###### 5) ecs:
 <a href="https://ibb.co/QHBc5V0"><img src="https://i.ibb.co/Yd9WrSg/13.png" alt="13" border="0"></a>
-##### 6) php-cs-fixer:
+###### 6) php-cs-fixer:
 <a href="https://ibb.co/mRymJsW"><img src="https://i.ibb.co/XW59XBR/15.png" alt="15" border="0"></a>
