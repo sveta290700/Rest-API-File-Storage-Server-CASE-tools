@@ -10,6 +10,7 @@
  * @license  https://opensource.org/licenses/MIT MIT License
  * @link     http://localhost/
  */
+
 namespace App\Http\Controllers;
 
 use App\Models\FileModel as File;
@@ -64,13 +65,15 @@ class FileController extends Controller
             return response()->json(
                 [
                 "message" => "File successfully uploaded",
-                ], 201
+                ],
+                201
             );
         } else {
             return response()->json(
                 [
                 "message" => "File was not found"
-                ], 404
+                ],
+                404
             );
         }
     }
@@ -89,7 +92,8 @@ class FileController extends Controller
             return response()->json(
                 [
                 "error" => "File was not found"
-                ], 404
+                ],
+                404
             );
         } else {
             return Storage::download($file->getPath(), $file->getTitle());
@@ -110,7 +114,8 @@ class FileController extends Controller
             return response()->json(
                 [
                 "error" => "File was not found"
-                ], 404
+                ],
+                404
             );
         } else {
             Storage::delete($file->getPath());
